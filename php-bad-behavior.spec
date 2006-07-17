@@ -1,12 +1,12 @@
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl):	Oparte na PHP oprogramowanie blokuj±ce spam z automatycznych odno¶ników
 Name:		bad-behavior
-Version:	2.0.1
+Version:	2.0.2
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://www.homelandstupidity.us/download/%{name}-%{version}.zip
-# Source0-md5:	6e1a53ccb597007fcde8ed032ca06a7b
+# Source0-md5:	1d3bf037015859e8f254076fa3729753
 URL:		http://www.homelandstupidity.us/software/bad-behavior/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
