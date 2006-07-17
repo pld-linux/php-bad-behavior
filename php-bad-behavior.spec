@@ -7,7 +7,7 @@ License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://www.homelandstupidity.us/download/%{name}-%{version}.zip
 # Source0-md5:	1d3bf037015859e8f254076fa3729753
-URL:		http://www.homelandstupidity.us/software/bad-behavior/
+URL:		http://error.wordpress.com/
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
