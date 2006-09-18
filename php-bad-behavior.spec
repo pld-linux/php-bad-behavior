@@ -29,12 +29,14 @@ Behavior jest dostêpny dla kilku opartych na PHP pakietów, mo¿e byæ
 tak¿e zintegrowany w krótkim czasie z dowolnym skryptem PHP.
 
 %prep
-%setup -qcT -n Bad-Behavior
-%{__unzip} -qq -a %{SOURCE0} -d ..
-rm -f index.html bad-behavior/index.html
+%setup -qcT
+%{__unzip} -qq -a %{SOURCE0}
+cd Bad-Behavior
+rm index.html bad-behavior/index.html
 
 %install
 rm -rf $RPM_BUILD_ROOT
+cd Bad-Behavior
 install -d $RPM_BUILD_ROOT%{_appdir}
 cp -a bad-behavior* $RPM_BUILD_ROOT%{_appdir}
 
@@ -43,5 +45,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.txt
+%doc Bad-Behavior/README.txt
 %{_appdir}
