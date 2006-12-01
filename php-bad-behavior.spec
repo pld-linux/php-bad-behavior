@@ -8,6 +8,7 @@ Group:		Applications/WWW
 Source0:	http://www.homelandstupidity.us/download/%{name}-%{version}.zip
 # Source0-md5:	041ada625171292cf1e0b553ec57eab5
 URL:		http://error.wordpress.com/
+BuildRequires:	unzip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
