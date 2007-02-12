@@ -1,5 +1,5 @@
 Summary:	PHP-based software which blocks automated link spam
-Summary(pl.UTF-8):   Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
+Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		bad-behavior
 Version:	2.0.10
 Release:	1
