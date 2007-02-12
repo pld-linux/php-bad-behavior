@@ -1,5 +1,5 @@
 Summary:	PHP-based software which blocks automated link spam
-Summary(pl):	Oparte na PHP oprogramowanie blokuj±ce spam z automatycznych odno¶ników
+Summary(pl.UTF-8):   Oparte na PHP oprogramowanie blokujÄ…ce spam z automatycznych odnoÅ›nikÃ³w
 Name:		bad-behavior
 Version:	2.0.10
 Release:	1
@@ -22,12 +22,12 @@ User-Agent and Referer, however. Bad Behavior is available for several
 PHP-based software packages, and also can be integrated in seconds
 into any PHP script.
 
-%description -l pl
-Bad Behavior to zbiór skryptów PHP zapobiegaj±cy dostêpowi spambotów
-do strony poprzez analizê ich ¿±dañ HTTP i porównywanie z profilami
-znanych spambotów. Wykracza znacz±co poza User-Agent i Referer. Bad
-Behavior jest dostêpny dla kilku opartych na PHP pakietów, mo¿e byæ
-tak¿e zintegrowany w krótkim czasie z dowolnym skryptem PHP.
+%description -l pl.UTF-8
+Bad Behavior to zbiÃ³r skryptÃ³w PHP zapobiegajÄ…cy dostÄ™powi spambotÃ³w
+do strony poprzez analizÄ™ ich Å¼Ä…daÅ„ HTTP i porÃ³wnywanie z profilami
+znanych spambotÃ³w. Wykracza znaczÄ…co poza User-Agent i Referer. Bad
+Behavior jest dostÄ™pny dla kilku opartych na PHP pakietÃ³w, moÅ¼e byÄ‡
+takÅ¼e zintegrowany w krÃ³tkim czasie z dowolnym skryptem PHP.
 
 %prep
 %setup -qcT
