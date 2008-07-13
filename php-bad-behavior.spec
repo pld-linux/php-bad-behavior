@@ -1,12 +1,12 @@
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		bad-behavior
-Version:	2.0.18
+Version:	2.0.20
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://www.bad-behavior.ioerror.us/download/%{name}-%{version}.zip
-# Source0-md5:	74b3f8f707d323f1fce3c42ac0a0ee80
+Source0:	http://downloads.wordpress.org/plugin/%{name}.%{version}.zip
+# Source0-md5:	fa752ddce4d0c9146f0fe9c93880092e
 URL:		http://www.bad-behavior.ioerror.us/
 BuildRequires:	unzip
 BuildArch:	noarch
@@ -32,12 +32,12 @@ także zintegrowany w krótkim czasie z dowolnym skryptem PHP.
 %prep
 %setup -qcT
 %{__unzip} -qq -a %{SOURCE0}
-cd Bad-Behavior
+cd bad-behavior
 rm index.html bad-behavior/index.html
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd Bad-Behavior
+cd bad-behavior
 install -d $RPM_BUILD_ROOT%{_appdir}
 cp -a bad-behavior* $RPM_BUILD_ROOT%{_appdir}
 
@@ -46,5 +46,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Bad-Behavior/README.txt
-%{_appdir}
+%doc bad-behavior/README.txt
+%dir %{_appdir}
+%{_appdir}/bad-behavior
+%{_appdir}/bad-behavior-generic.php
+%{_appdir}/bad-behavior-lifetype.php
+%{_appdir}/bad-behavior-mediawiki.php
+%{_appdir}/bad-behavior-wordpress-admin.php
+%{_appdir}/bad-behavior-wordpress.php
