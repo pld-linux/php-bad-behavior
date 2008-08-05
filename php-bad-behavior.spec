@@ -1,12 +1,12 @@
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		bad-behavior
-Version:	2.0.20
+Version:	2.0.21
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://downloads.wordpress.org/plugin/%{name}.%{version}.zip
-# Source0-md5:	fa752ddce4d0c9146f0fe9c93880092e
+# Source0-md5:	3bb15431239e1ae6488aa8025ed6bf62
 URL:		http://www.bad-behavior.ioerror.us/
 BuildRequires:	unzip
 BuildArch:	noarch
