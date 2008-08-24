@@ -6,7 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://downloads.wordpress.org/plugin/%{name}.%{version}.zip
-# Source0-md5:	1fd94706aa8c7097f0b6a24306ef8d8c
+# Source0-md5:	603e59be572c84647f94e8a2c96b7625
 URL:		http://www.bad-behavior.ioerror.us/
 BuildRequires:	unzip
 BuildArch:	noarch
