@@ -9,6 +9,7 @@ Source0:	http://downloads.wordpress.org/plugin/%{name}.%{version}.zip
 # Source0-md5:	4aa70952989c507f171b880b01c973b8
 URL:		http://www.bad-behavior.ioerror.us/
 BuildRequires:	unzip
+Requires:	php-common
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
