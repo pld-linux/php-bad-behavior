@@ -1,12 +1,15 @@
+# NOTE
+# - the md5 is different in various wp backends, so invoke this to find the most used one and fetchsrc_request several times until distfiles catches the same one:
+#   while sleep 1; do rm *.zip; ./md5 bad-behavior.spec; done
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		bad-behavior
-Version:	2.0.26
+Version:	2.0.28
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://downloads.wordpress.org/plugin/%{name}.%{version}.zip
-# Source0-md5:	4aa70952989c507f171b880b01c973b8
+# Source0-md5:	c6bcb80b3fd075899a7bf69054f64648
 URL:		http://www.bad-behavior.ioerror.us/
 BuildRequires:	unzip
 Requires:	php-common
