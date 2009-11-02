@@ -4,12 +4,12 @@
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		bad-behavior
-Version:	2.0.28
+Version:	2.0.32
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://downloads.wordpress.org/plugin/%{name}.%{version}.zip
-# Source0-md5:	c6bcb80b3fd075899a7bf69054f64648
+# Source0-md5:	a88dcb57f7b5088f0bef56edd725e00c
 URL:		http://www.bad-behavior.ioerror.us/
 BuildRequires:	unzip
 Requires:	php-common
@@ -34,14 +34,15 @@ Behavior jest dostępny dla kilku opartych na PHP pakietów, może być
 także zintegrowany w krótkim czasie z dowolnym skryptem PHP.
 
 %prep
-%setup -qcT
-%{__unzip} -qq -a %{SOURCE0}
-cd bad-behavior
+# unpack in ascii mode
+%define __unzip /usr/bin/unzip -a
+%setup -qc
+mv {,.}bad-behavior
+mv .bad-behavior/* .
 rm index.html bad-behavior/index.html
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd bad-behavior
 install -d $RPM_BUILD_ROOT%{_appdir}
 cp -a bad-behavior* $RPM_BUILD_ROOT%{_appdir}
 
@@ -50,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc bad-behavior/README.txt
+%doc README.txt
 %dir %{_appdir}
 %{_appdir}/bad-behavior
 %{_appdir}/bad-behavior-generic.php
