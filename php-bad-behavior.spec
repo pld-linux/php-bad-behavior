@@ -1,22 +1,23 @@
 # NOTE
 # - the md5 is different in various wp backends, so invoke this to find the most used one and fetchsrc_request several times until distfiles catches the same one:
-#   while sleep 1; do rm *.zip; ./md5 bad-behavior.spec; done
+#   while sleep 1; do rm *.zip; ./md5 php-bad-behavior.spec; done
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
-Name:		bad-behavior
-Version:	2.0.33
+Name:		php-bad-behavior
+Version:	2.0.34
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://downloads.wordpress.org/plugin/%{name}.%{version}.zip
-# Source0-md5:	9e084a49f2ddc7d6cd15b497702cec7a
+Source0:	http://downloads.wordpress.org/plugin/bad-behavior.%{version}.zip
+# Source0-md5:	41aa0f1bed34e507ef9467eac4d5e735
 URL:		http://www.bad-behavior.ioerror.us/
 BuildRequires:	unzip
 Requires:	php-common
+Obsoletes:	bad-behavior
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_appdir		%{_datadir}/php/%{name}
+%define		_appdir		%{php_data_dir}/bad-behavior
 
 %description
 Bad Behavior is a set of PHP scripts which prevents spambots from
@@ -43,8 +44,8 @@ rm index.html bad-behavior/index.html
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_appdir}
-cp -a bad-behavior* $RPM_BUILD_ROOT%{_appdir}
+install -d $RPM_BUILD_ROOT%{php_data_dir}
+cp -a bad-behavior* $RPM_BUILD_ROOT%{php_data_dir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,10 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.txt
-%dir %{_appdir}
-%{_appdir}/bad-behavior
-%{_appdir}/bad-behavior-generic.php
-%{_appdir}/bad-behavior-lifetype.php
-%{_appdir}/bad-behavior-mediawiki.php
-%{_appdir}/bad-behavior-wordpress-admin.php
-%{_appdir}/bad-behavior-wordpress.php
+%{php_data_dir}/bad-behavior
+%{php_data_dir}/bad-behavior-generic.php
+%{php_data_dir}/bad-behavior-lifetype.php
+%{php_data_dir}/bad-behavior-mediawiki.php
+%{php_data_dir}/bad-behavior-wordpress-admin.php
+%{php_data_dir}/bad-behavior-wordpress.php
