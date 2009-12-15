@@ -1,6 +1,6 @@
 # NOTE
-# - the md5 is different in various wp backends, so invoke this to find the most used one and fetchsrc_request several times until distfiles catches the same one:
-#   while sleep 1; do rm *.zip; ./md5 php-bad-behavior.spec; done
+# - the md5 is different in various wp backends, so invoke packages/fetchsrc_request
+#   several times until distfiles catches the same one you downloaded.
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		php-bad-behavior
