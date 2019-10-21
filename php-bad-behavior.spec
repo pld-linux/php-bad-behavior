@@ -1,18 +1,19 @@
 # NOTE
 # - the md5 is different in various wp backends, so invoke packages/fetchsrc_request
 #   several times until distfiles catches the same one you downloaded.
+%define		php_min_version 5.2.0
 Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		php-bad-behavior
-Version:	2.0.47
-Release:	2
-License:	GPL v2
+Version:	2.2.23
+Release:	1
+License:	LGPLv3
 Group:		Applications/WWW
-Source0:	http://downloads.wordpress.org/plugin/bad-behavior.%{version}.zip
-# Source0-md5:	67d3731eb3868275f32bf83e1965a65c
-URL:		http://www.bad-behavior.ioerror.us/
+Source0:	https://downloads.wordpress.org/plugin/bad-behavior.%{version}.zip
+# Source0-md5:	565f3d5cf412d13db2ab460ba2902caa
+URL:		https://bad-behavior.ioerror.us
 BuildRequires:	unzip
-Requires:	php(core)
+Requires:	php(core) >= %{php_min_version}
 Obsoletes:	bad-behavior
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.txt
 %{php_data_dir}/bad-behavior
 %{php_data_dir}/bad-behavior-generic.php
-%{php_data_dir}/bad-behavior-lifetype.php
 %{php_data_dir}/bad-behavior-mediawiki.php
+%{php_data_dir}/bad-behavior-mysql.php
 %{php_data_dir}/bad-behavior-wordpress-admin.php
 %{php_data_dir}/bad-behavior-wordpress.php
