@@ -6,7 +6,7 @@ Summary:	PHP-based software which blocks automated link spam
 Summary(pl.UTF-8):	Oparte na PHP oprogramowanie blokujące spam z automatycznych odnośników
 Name:		php-bad-behavior
 Version:	2.2.23
-Release:	1
+Release:	2
 License:	LGPLv3
 Group:		Applications/WWW
 Source0:	https://downloads.wordpress.org/plugin/bad-behavior.%{version}.zip
